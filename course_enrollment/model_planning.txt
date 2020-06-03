@@ -1,0 +1,38 @@
+Membership Model:
+-slug thakbe
+-type(membership type,free,pro,enterprise)
+-membership price
+-stripe plan id(online payment id)
+
+
+=> free(0) / professional(20) / enterprise(30)
+
+UserMembership
+-user
+-stripe customar id
+-membership type(Membership foreign key)
+
+Subscription:
+-user_membership(Foreign key UserMembership)
+-stripe price id
+-active
+
+Course:
+-slug
+-title
+-description
+-allowed_memebership(foreign key to Memebership)
+
+Lesson:
+-slug
+-title
+-course(Foreign key to Course)
+-position
+-video
+-video image/thumbnail
+
+Course : Object Oriented Programming(JAVA)
+1)basic data types
+2)class and objects
+3)interface
+
